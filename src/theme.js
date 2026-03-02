@@ -156,161 +156,154 @@ const DARK = {
 };
 
 
-
 // ─────────────────────────────────────────────────
-// "WARM CANVAS + STEEL" PALETTE
-// Beige/cream page bg · steel-grey cards & panels
+// "CLOUD + VIOLET" PALETTE  (PRISM brand-derived)
+// Soft warm lavender bg · white cards · purple accent
 // ─────────────────────────────────────────────────
 const LIGHT = {
 
   // ── Core surfaces ──────────────────────────────
-  bg:           "#e8e2d8",      // warm cream page bg
-  bgAlt:        "#e0d8ce",      // slightly deeper warm alt
-  card:         "#2c3446",      // steel-grey card (from twilight)
-  cardAlt:      "#303a4c",      // secondary card fill
-  cardHover:    "#3a4560",      // hover
-  border:       "#4a5670",      // border inside cards
-  borderStrong: "#5a6880",      // heavy divider
-  strip:        "#384258",      // dot-strip tracks
-  inputBg:      "#222838",      // input / sub-panel bg
-  gridLine:     "#384258",      // SVG grid stroke
+  bg:           "#edeaef",      // soft warm lavender page bg
+  bgAlt:        "#e4e0e6",      // deeper lavender alt
+  card:         "#ffffff",      // clean white cards
+  cardAlt:      "#f5f3f7",      // tinted card alt
+  cardHover:    "#ebe8f0",      // hover
+  border:       "#cdc6d4",      // soft purple-grey border
+  borderStrong: "#b8b0c2",      // heavier divider
+  strip:        "#ddd8e2",      // dot-strip tracks
+  inputBg:      "#f0edf4",      // input / sub-panel bg
+  gridLine:     "#ddd8e2",      // SVG grid stroke
 
-  // ── Page-level text (dark on beige bg) ────────
-  // Use these for elements that sit directly on the page bg
-  pgText:       "#3a3228",      // page-level primary (warm dark brown)
-  pgBody:       "#4a4238",      // page-level body copy
-  pgMono:       "#5a5248",      // page-level monospace / muted
-  pgSubtle:     "#6a6058",      // page-level subtle labels
-  pgDim:        "#988e84",      // page-level dim
-
-  // ── Text hierarchy (light on steel cards) ─────
-  text1:        "#dce4f0",      // primary text
-  text2:        "#94a4ba",      // secondary / muted
-  text3:        "#606e84",      // tertiary / dim labels
-  textBright:   "#edf2fa",      // near-white emphasis
-  textMax:      "#f4f8ff",      // maximum contrast headings
-  textDim:      "#606e84",      // dim labels
-  textSubtle:   "#708098",      // footer / legend
-  textMono:     "#90a0b8",      // monospace UI labels
-  textBody:     "#c4d0e0",      // body copy
-  textInvert:   "#3a3228",      // text on bright accent fills
+  // ── Text hierarchy ─────────────────────────────
+  text1:        "#1c1828",      // near-black primary
+  text2:        "#60586e",      // warm grey secondary
+  text3:        "#807088",      // tertiary
+  textBright:   "#0c0814",      // max dark emphasis
+  textMax:      "#0c0814",      // headings
+  textDim:      "#908898",      // dim labels
+  textSubtle:   "#908898",      // footer / legend
+  textMono:     "#60586e",      // monospace UI labels
+  textBody:     "#302840",      // body copy
+  textInvert:   "#ffffff",      // text on dark accent fills
 
   // ── Accent / brand ─────────────────────────────
-  accent:       "#70a8d8",      // bright blue accent
-  accentLight:  "#90c4f0",      // vivid accent for labels
-  accentMuted:  "#4878a8",      // muted accent borders
-  accentDim:    "#2c4060",      // dim accent info boxes
+  accent:       "#6838a8",      // PRISM brand purple
+  accentLight:  "#7c4cc0",      // lighter purple
+  accentMuted:  "#b8a0d8",      // muted purple
+  accentDim:    "#e8e0f4",      // dim purple info boxes
 
   // ── Party ──────────────────────────────────────
-  gop:          "#f06868",
-  gopFill:      "#e03838",
-  gopStroke:    "#f05858",
-  gopText:      "#fcc8c8",
-  gopBadgeBg:   "#5c1818",
-  gopBadgeText: "#f8a8a8",
-  gopHeaderBg:  "#321820",
-  gopHeaderBdr: "#f05858",
+  gop:          "#d03030",
+  gopFill:      "#c82828",
+  gopStroke:    "#b01818",
+  gopText:      "#701414",
+  gopBadgeBg:   "#f8d4d4",
+  gopBadgeText: "#881818",
+  gopHeaderBg:  "#f8eeee",
+  gopHeaderBdr: "#d84040",
 
-  dem:          "#60a0f0",
-  demFill:      "#3868e0",
-  demStroke:    "#5890f0",
-  demText:      "#c0d8f8",
-  demBadgeBg:   "#182850",
-  demBadgeText: "#98c0f8",
-  demHeaderBg:  "#182030",
-  demHeaderBdr: "#5890f0",
+  dem:          "#2858c8",
+  demFill:      "#2050c0",
+  demStroke:    "#1840a8",
+  demText:      "#142870",
+  demBadgeBg:   "#d4e0f8",
+  demBadgeText: "#183898",
+  demHeaderBg:  "#eef2fa",
+  demHeaderBdr: "#3868d8",
 
   // ── Tiers ──────────────────────────────────────
-  tier1:        "#48d898",
-  tier1Bg:      "#143828",
-  tier2:        "#e8b038",
-  tier2Bg:      "#382c10",
-  tier3:        "#f05050",
-  tier3Bg:      "#381414",
+  tier1:        "#0c9060",
+  tier1Bg:      "#d0f0e0",
+  tier2:        "#a87808",
+  tier2Bg:      "#f4ecc8",
+  tier3:        "#c82828",
+  tier3Bg:      "#f8d4d4",
 
   // ── Semantic / data viz ────────────────────────
-  green:        "#48d898",
-  greenBright:  "#60f0a8",
-  red:          "#f05050",
-  redLight:     "#f87070",
-  amber:        "#d89048",
-  amberBright:  "#f0b048",
-  cyan:         "#38d0f0",
-  teal:         "#38d0b0",
-  tealDark:     "#58e8c8",
-  violet:       "#a888f0",
-  violetDark:   "#8888f0",
-  rose:         "#f04870",
-  blue:         "#4888f0",
-  blueLight:    "#60a0f8",
-  blueDim:      "#60a0e0",
+  green:        "#0c9060",
+  greenBright:  "#10b870",
+  red:          "#c82828",
+  redLight:     "#e04040",
+  amber:        "#a06008",
+  amberBright:  "#c88010",
+  cyan:         "#0888a8",
+  teal:         "#0c8878",
+  tealDark:     "#10a890",
+  violet:       "#6838a8",
+  violetDark:   "#5858c8",
+  rose:         "#c01840",
+  blue:         "#2858c8",
+  blueLight:    "#3868d8",
+  blueDim:      "#3868d8",
 
   // ── Profiler-specific ──────────────────────────
-  govtBlue:     "#60a0e0",
-  corpAmber:    "#d89048",
+  govtBlue:     "#2858c8",
+  corpAmber:    "#a06008",
 
   // ── Message map theme badges ───────────────────
-  themeFinancial:   "#48d898",
-  themeCoverage:    "#60a0f8",
-  themeInnovation:  "#a888f0",
-  themeFreedom:     "#f0b048",
-  themeSocial:      "#f05050",
-  themeTrust:       "#38d0b0",
-  themeOther:       "#90a0b8",
+  themeFinancial:   "#0c9060",
+  themeCoverage:    "#2858c8",
+  themeInnovation:  "#6838a8",
+  themeFreedom:     "#c88010",
+  themeSocial:      "#c82828",
+  themeTrust:       "#0c8878",
+  themeOther:       "#60586e",
 
   // ── Persuadability stack ───────────────────────
-  persHigh:     "#70a8d8",
-  persLow:      "#90c4f0",
-  persNot:      "#606e84",
-  persNo:       "#404c60",
-  persNeg:      "#2c3446",
+  persHigh:     "#6838a8",
+  persLow:      "#b8a0d8",
+  persNot:      "#908898",
+  persNo:       "#cdc6d4",
+  persNeg:      "#e4e0e6",
 
   // ── MessageMap SoP heatmap (bg, text) ──────────
-  sopHot:       { bg: "#145038", text: "#78f0b8" },
-  sopWarm:      { bg: "#143828", text: "#68e0a8" },
-  sopMid:       { bg: "#1c3830", text: "#90e0c0" },
-  sopNeutral:   { bg: "#303a4c", text: "#c4d0e0" },
-  sopCool:      { bg: "#282e40", text: "#94a4ba" },
-  sopCold:      { bg: "#382028", text: "#e098a0" },
-  sopChilly:    { bg: "#441820", text: "#f8a8a8" },
-  sopIce:       { bg: "#501018", text: "#fca8b0" },
+  sopHot:       { bg: "#c8f0d8", text: "#065838" },   // ≥13
+  sopWarm:      { bg: "#d4f0e0", text: "#087040" },   // 10-12
+  sopMid:       { bg: "#e0f4ea", text: "#106848" },   // 7-9
+  sopNeutral:   { bg: "#f0eef2", text: "#60586e" },   // 6
+  sopCool:      { bg: "#f5f3f7", text: "#908898" },   // 5
+  sopCold:      { bg: "#f8e4e4", text: "#981828" },   // 4
+  sopChilly:    { bg: "#f4d0d2", text: "#881818" },   // 3
+  sopIce:       { bg: "#f0c0c4", text: "#801020" },   // ≤2
 
   // ── Map / geography ────────────────────────────
-  mapActive:       "#70a8d8",
-  mapActiveBorder: "#5088c8",
-  mapIdle:         "#2c3446",
-  mapIdleBorder:   "#4a5670",
-  mapHover:        "#4878a8",
+  mapActive:       "#6838a8",
+  mapActiveBorder: "#4c28a0",
+  mapIdle:         "#e4e0e6",
+  mapIdleBorder:   "#cdc6d4",
+  mapHover:        "#d8c8f0",
 
   // ── Segment map specific ───────────────────────
-  segMapBg:        "#e0d8ce",
-  segMapGrid:      "#384258",
-  segMapDivider:   "#5a6880",
-  segMapBadgeBg:   "#222838",
+  segMapBg:        "#e4e0e6",
+  segMapGrid:      "#ddd8e2",
+  segMapDivider:   "#b8b0c2",
+  segMapBadgeBg:   "#f0edf4",
 
   // ── Ideology heatmap ───────────────────────────
-  ideoBlue:     "rgba(72,136,240,",
-  ideoRed:      "rgba(240,80,80,",
-  ideoNeutral:  "rgba(96,110,132,",
+  ideoBlue:     "rgba(40,88,200,",
+  ideoRed:      "rgba(200,40,40,",
+  ideoNeutral:  "rgba(96,88,110,",
 
   // ── Rings / donut charts ───────────────────────
-  ring1:        "#70a8d8",
-  ring2:        "#384258",
+  ring1:        "#6838a8",
+  ring2:        "#d8d0e0",
 
   // ── Sort / interactive state ───────────────────
-  sortActiveBg:  "#2c4060",
-  sortIndicator: "#60a0f8",
+  sortActiveBg:  "#e0d8f0",
+  sortIndicator: "#6838a8",
 
   // ── PE (Policy Elites) column ──────────────────
-  peColor:      "#a888f0",
-  peHeaderBg:   "#241838",
-  peBorder:     "#a888f0",
+  peColor:      "#6838a8",
+  peHeaderBg:   "#f4f0f8",
+  peBorder:     "#6838a8",
 
   // ── Total column ───────────────────────────────
-  totalColor:   "#48d898",
-  totalHeaderBg:"#142820",
-  totalBorder:  "#48d898",
+  totalColor:   "#0c9060",
+  totalHeaderBg:"#ecf8f0",
+  totalBorder:  "#0c9060",
 };
+
+
 // ─────────────────────────────────────────────────
 // HELPER: SoP color lookup (replaces getSopC)
 // ─────────────────────────────────────────────────
@@ -366,7 +359,7 @@ export function persColors(theme) {
 // ═════════════════════════════════════════════════
 
 // export const T = DARK;
-export const T = LIGHT;       // ← warm canvas + steel grey (active)
+export const T = LIGHT;       // ← Cloud + Violet (PRISM brand) active
 
 // Both palettes are also available for a runtime toggle:
 export { DARK, LIGHT };
