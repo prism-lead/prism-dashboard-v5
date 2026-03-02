@@ -291,9 +291,9 @@ export default function AudienceROI() {
         <div style={{ marginBottom: 16 }}>
           <h1 style={{
             fontFamily: "'JetBrains Mono',monospace", fontSize: 14, fontWeight: 700,
-            color: T.text1, margin: 0, letterSpacing: 2, textTransform: "uppercase"
+            color: T.pgText, margin: 0, letterSpacing: 2, textTransform: "uppercase"
           }}>Audience ROI</h1>
-          <div style={{ fontSize: 9, color: T.text3, marginTop: 3, fontFamily: "'JetBrains Mono',monospace" }}>
+          <div style={{ fontSize: 9, color: T.pgMono, marginTop: 3, fontFamily: "'JetBrains Mono',monospace" }}>
             ROI = Population × (Persuasion + Coalition Value + Activation + Influence)
           </div>
           <div style={{ display: "flex", gap: 4, marginTop: 8 }}>

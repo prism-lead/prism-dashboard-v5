@@ -43,11 +43,11 @@ export default function MessageMap(){
   const colHighlight = (colIdx) => isColActive(colIdx) ? "rgba(96,165,250,0.08)" : "transparent";
 
   return(
-    <div style={{maxWidth:1650,margin:"0 auto",color:T.textBright}}>
+    <div style={{maxWidth:1650,margin:"0 auto",color:T.pgText}}>
       {/* Description */}
       <div style={{marginBottom:12}}>
-        <div style={{fontSize:11,color:T.text2,maxWidth:1100,lineHeight:1.5}}>
-          <strong style={{color:T.textBody}}>Share of Preference</strong> heatmap <span style={{color:T.textMono}}>(a measure from a discrete choice model depicting how likely a message is chosen as the most compelling relative to other messages)</span> · 15-item MaxDiff · 16 PRISM segments + Policy Elites.
+        <div style={{fontSize:11,color:T.pgMono,maxWidth:1100,lineHeight:1.5}}>
+          <strong style={{color:T.pgBody}}>Share of Preference</strong> heatmap <span style={{color:T.pgSubtle}}>(a measure from a discrete choice model depicting how likely a message is chosen as the most compelling relative to other messages)</span> · 15-item MaxDiff · 16 PRISM segments + Policy Elites.
         </div>
       </div>
       {/* Study toggle */}
@@ -59,10 +59,10 @@ export default function MessageMap(){
 
       {/* Legend */}
       <div style={{display:"flex",gap:12,alignItems:"center",marginBottom:6,flexWrap:"wrap"}}>
-        <span style={{fontFamily:"'JetBrains Mono',monospace",fontSize:7,color:T.textSubtle,letterSpacing:1}}>SoP:</span>
-        {[{l:"≤6",bg:T.sopIce.bg},{l:"7-8",bg:T.sopCold.bg},{l:"9-10",bg:T.sopNeutral.bg},{l:"11-12",bg:T.sopWarm.bg},{l:"≥13",bg:T.sopHot.bg}].map((h,i)=>(<div key={i} style={{display:"flex",alignItems:"center",gap:2}}><div style={{width:10,height:10,borderRadius:2,background:h.bg,border:`1px solid ${T.borderStrong}`}}/><span style={{fontSize:7,color:T.text2}}>{h.l}</span></div>))}
-        <span style={{marginLeft:10,fontFamily:"'JetBrains Mono',monospace",fontSize:7,color:T.textSubtle,letterSpacing:1}}>THEME:</span>
-        {["Financial","Coverage","Innovation","Freedom","Social Contract","Trust"].map(t=>(<div key={t} style={{display:"flex",alignItems:"center",gap:2}}><div style={{width:6,height:6,borderRadius:"50%",background:themeColor(t, T)}}/><span style={{fontSize:7,color:T.text2}}>{t}</span></div>))}
+        <span style={{fontFamily:"'JetBrains Mono',monospace",fontSize:7,color:T.pgSubtle,letterSpacing:1}}>SoP:</span>
+        {[{l:"≤6",bg:T.sopIce.bg},{l:"7-8",bg:T.sopCold.bg},{l:"9-10",bg:T.sopNeutral.bg},{l:"11-12",bg:T.sopWarm.bg},{l:"≥13",bg:T.sopHot.bg}].map((h,i)=>(<div key={i} style={{display:"flex",alignItems:"center",gap:2}}><div style={{width:10,height:10,borderRadius:2,background:h.bg,border:`1px solid ${T.borderStrong}`}}/><span style={{fontSize:7,color:T.pgMono}}>{h.l}</span></div>))}
+        <span style={{marginLeft:10,fontFamily:"'JetBrains Mono',monospace",fontSize:7,color:T.pgSubtle,letterSpacing:1}}>THEME:</span>
+        {["Financial","Coverage","Innovation","Freedom","Social Contract","Trust"].map(t=>(<div key={t} style={{display:"flex",alignItems:"center",gap:2}}><div style={{width:6,height:6,borderRadius:"50%",background:themeColor(t, T)}}/><span style={{fontSize:7,color:T.pgMono}}>{t}</span></div>))}
       </div>
 
       {/* Heatmap table */}
