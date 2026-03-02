@@ -158,34 +158,42 @@ const DARK = {
 
 
 // ─────────────────────────────────────────────────
-// MID-TONE "TWILIGHT" PALETTE  (high-contrast variant)
+// "WARM CANVAS + STEEL" PALETTE
+// Beige/cream page bg · steel-grey cards & panels
 // ─────────────────────────────────────────────────
 const LIGHT = {
 
   // ── Core surfaces ──────────────────────────────
-  // Darker base + lighter cards = strong card lift
-  bg:           "#1e2432",      // deep slate page bg
-  bgAlt:        "#1a2030",      // deeper alternate bg
-  card:         "#2c3446",      // lifted card — clear separation from bg
+  bg:           "#e8e2d8",      // warm cream page bg
+  bgAlt:        "#e0d8ce",      // slightly deeper warm alt
+  card:         "#2c3446",      // steel-grey card (from twilight)
   cardAlt:      "#303a4c",      // secondary card fill
-  cardHover:    "#3a4560",      // pronounced hover
-  border:       "#4a5670",      // strong visible border
-  borderStrong: "#5a6880",      // heavy divider — clearly visible
+  cardHover:    "#3a4560",      // hover
+  border:       "#4a5670",      // border inside cards
+  borderStrong: "#5a6880",      // heavy divider
   strip:        "#384258",      // dot-strip tracks
   inputBg:      "#222838",      // input / sub-panel bg
   gridLine:     "#384258",      // SVG grid stroke
 
-  // ── Text hierarchy ─────────────────────────────
-  text1:        "#dce4f0",      // bright primary text
-  text2:        "#94a4ba",      // clear secondary
-  text3:        "#606e84",      // tertiary still readable
+  // ── Page-level text (dark on beige bg) ────────
+  // Use these for elements that sit directly on the page bg
+  pgText:       "#3a3228",      // page-level primary (warm dark brown)
+  pgBody:       "#4a4238",      // page-level body copy
+  pgMono:       "#5a5248",      // page-level monospace / muted
+  pgSubtle:     "#6a6058",      // page-level subtle labels
+  pgDim:        "#988e84",      // page-level dim
+
+  // ── Text hierarchy (light on steel cards) ─────
+  text1:        "#dce4f0",      // primary text
+  text2:        "#94a4ba",      // secondary / muted
+  text3:        "#606e84",      // tertiary / dim labels
   textBright:   "#edf2fa",      // near-white emphasis
   textMax:      "#f4f8ff",      // maximum contrast headings
   textDim:      "#606e84",      // dim labels
-  textSubtle:   "#708098",      // footer / legend — bumped up
-  textMono:     "#90a0b8",      // monospace UI labels — brighter
-  textBody:     "#c4d0e0",      // body copy — high readability
-  textInvert:   "#141820",      // text on bright accent fills
+  textSubtle:   "#708098",      // footer / legend
+  textMono:     "#90a0b8",      // monospace UI labels
+  textBody:     "#c4d0e0",      // body copy
+  textInvert:   "#3a3228",      // text on bright accent fills
 
   // ── Accent / brand ─────────────────────────────
   accent:       "#70a8d8",      // bright blue accent
@@ -200,7 +208,7 @@ const LIGHT = {
   gopText:      "#fcc8c8",
   gopBadgeBg:   "#5c1818",
   gopBadgeText: "#f8a8a8",
-  gopHeaderBg:  "#321820",      // dark rose tint
+  gopHeaderBg:  "#321820",
   gopHeaderBdr: "#f05858",
 
   dem:          "#60a0f0",
@@ -209,7 +217,7 @@ const LIGHT = {
   demText:      "#c0d8f8",
   demBadgeBg:   "#182850",
   demBadgeText: "#98c0f8",
-  demHeaderBg:  "#182030",      // dark blue tint
+  demHeaderBg:  "#182030",
   demHeaderBdr: "#5890f0",
 
   // ── Tiers ──────────────────────────────────────
@@ -275,7 +283,7 @@ const LIGHT = {
   mapHover:        "#4878a8",
 
   // ── Segment map specific ───────────────────────
-  segMapBg:        "#1a2030",
+  segMapBg:        "#e0d8ce",
   segMapGrid:      "#384258",
   segMapDivider:   "#5a6880",
   segMapBadgeBg:   "#222838",
@@ -295,12 +303,12 @@ const LIGHT = {
 
   // ── PE (Policy Elites) column ──────────────────
   peColor:      "#a888f0",
-  peHeaderBg:   "#241838",      // dark purple tint
+  peHeaderBg:   "#241838",
   peBorder:     "#a888f0",
 
   // ── Total column ───────────────────────────────
   totalColor:   "#48d898",
-  totalHeaderBg:"#142820",      // dark green tint
+  totalHeaderBg:"#142820",
   totalBorder:  "#48d898",
 };
 // ─────────────────────────────────────────────────
@@ -358,7 +366,7 @@ export function persColors(theme) {
 // ═════════════════════════════════════════════════
 
 // export const T = DARK;
-export const T = LIGHT;       // ← mid-tone "twilight" mode (active)
+export const T = LIGHT;       // ← warm canvas + steel grey (active)
 
 // Both palettes are also available for a runtime toggle:
 export { DARK, LIGHT };
