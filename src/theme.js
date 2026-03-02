@@ -163,7 +163,7 @@ const DARK = {
 const LIGHT = {
 
   // ── Core surfaces ──────────────────────────────
-  bg:           "#37060e",      // soft warm lavender page bg
+  bg:           "#edeaef",      // soft warm lavender page bg
   bgAlt:        "#e4e0e6",      // deeper lavender alt
   card:         "#ffffff",      // clean white cards
   cardAlt:      "#f5f3f7",      // tinted card alt
