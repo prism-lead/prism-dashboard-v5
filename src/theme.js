@@ -357,8 +357,8 @@ export function persColors(theme) {
 // EXPORT — Change this one line to switch modes
 // ═════════════════════════════════════════════════
 
-export const T = DARK;
-// export const T = LIGHT;    // ← uncomment this line & comment the one above
+// export const T = DARK;
+export const T = LIGHT;
 
 // Both palettes are also available for a runtime toggle:
-export { DARK, LIGHT };
+// export { DARK, LIGHT };
