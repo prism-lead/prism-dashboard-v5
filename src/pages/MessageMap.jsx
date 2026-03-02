@@ -1,28 +1,10 @@
 import { useState, useMemo } from "react";
 import DATA from "../data/studyData";
+import { T, getSopColor, themeColor, partyColor } from "../theme";
 
 // ─── SEGMENTS & SoP from data file ───
 const SEGMENTS = DATA.segments;
 
-// ─── Theme colors ───
-const THEME_COLORS = {
-  Financial:"#34d399", Coverage:"#60a5fa", Innovation:"#a78bfa",
-  Freedom:"#fbbf24", "Social Contract":"#f87171", Trust:"#5eead4", Other:"#94a3b8"
-};
-
-// ─── Party colors (matching AudienceROI) ───
-const PARTY_COLOR = { GOP: "#e57373", DEM: "#64b5f6" };
-
-function getSopC(v){
-  if(v>=13)return{bg:"#065f46",t:"#6ee7b7"};
-  if(v>=10)return{bg:"#064e3b",t:"#6ee7b7"};
-  if(v>=7)return{bg:"#1a3a2a",t:"#a7f3d0"};
-  if(v>=6)return{bg:"#1e293b",t:"#cbd5e1"};
-  if(v>=5)return{bg:"#1a1f2e",t:"#94a3b8"};
-  if(v>=4)return{bg:"#1a1520",t:"#94a3b8"};
-  if(v>=3)return{bg:"#1f1318",t:"#f9a8a8"};
-  return{bg:"#2d1215",t:"#fca5a5"};
-}
 
 function Tooltip({msg,x,y}){
   return(
@@ -246,11 +228,11 @@ export default function MessageMap(){
 
                 {/* Theme badge */}
                 <td style={{background: rowActive ? "#1a2030" : "#111827",textAlign:"center",padding:2}}>
-                  <span style={{fontSize:6,fontFamily:"'JetBrains Mono',monospace",padding:"1px 4px",borderRadius:3,background:"rgba(0,0,0,0.3)",color:THEME_COLORS[msg.theme]||"#94a3b8",fontWeight:600}}>{(msg.theme||"").toUpperCase()}</span>
+                  <span style={{fontSize:6,fontFamily:"'JetBrains Mono',monospace",padding:"1px 4px",borderRadius:3,background:"rgba(0,0,0,0.3)",color:themeColor(msg.theme, T),fontWeight:600}}>{(msg.theme||"").toUpperCase()}</span>
                 </td>
 
                 {/* ── Total cell ── */}
-                {(()=>{const val=sop[totalIdx],{bg,t:tx}=getSopC(val),isSel=sortCol===totalIdx,isHovC=isColActive(totalIdx);return(
+                {(()=>{const val=sop[totalIdx],{bg,text:tx}=getSopColor(val, T),isSel=sortCol===totalIdx,isHovC=isColActive(totalIdx);return(
                   <td
                     onMouseEnter={()=>setHoverCol(totalIdx)}
                     onMouseLeave={()=>setHoverCol(null)}
@@ -267,7 +249,7 @@ export default function MessageMap(){
                 )})()}
 
                 {/* ── Segment cells ── */}
-                {SEGMENTS.map((seg,si)=>{const colIdx=si+segStartIdx;const val=sop[colIdx],{bg,t:tx}=getSopC(val),isSel=sortCol===colIdx,isHovC=isColActive(colIdx);return(
+                {SEGMENTS.map((seg,si)=>{const colIdx=si+segStartIdx;const val=sop[colIdx],{bg,text:tx}=getSopColor(val, T),isSel=sortCol===colIdx,isHovC=isColActive(colIdx);return(
                   <td key={seg.id}
                     onMouseEnter={()=>setHoverCol(colIdx)}
                     onMouseLeave={()=>setHoverCol(null)}
@@ -283,7 +265,7 @@ export default function MessageMap(){
                 )})}
 
                 {/* ── PE cell ── */}
-                {(()=>{const val=sop[peIdx],{bg,t:tx}=getSopC(val),isSel=sortCol===peIdx,isHovC=isColActive(peIdx);return(
+                {(()=>{const val=sop[peIdx],{bg,text:tx}=getSopColor(val, T),isSel=sortCol===peIdx,isHovC=isColActive(peIdx);return(
                   <td
                     onMouseEnter={()=>setHoverCol(peIdx)}
                     onMouseLeave={()=>setHoverCol(null)}
