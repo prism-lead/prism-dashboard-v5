@@ -30,6 +30,8 @@ const ASSIGNED_TIERS = {
         UCP:1, FJP:1, HCP:1, HAD:3, HCI:1, GHI:1},
 };
 
+function getTier(code, study) { return (ASSIGNED_TIERS[study] || ASSIGNED_TIERS.ESI)[code] || 2; }
+
 // ─── MINI DONUT ───
 function MiniDonut({ value, size = 40, color = T.accent, strokeW = 4 }) {
   const r = (size - strokeW) / 2;
@@ -276,11 +278,11 @@ export default function AudienceROI() {
   const prePostH = H.prePostPad + PRE_POST_METRICS.length * H.prePostRow;
 
   const persuadLabels = [
-    { label: "High leverage", color: T.accent },
-    { label: "Low leverage", color: T.accentLight },
+    { label: "High leverage", color: T.persNot },
+    { label: "Low leverage", color: T.persNo },
     { label: "Not convertible", color: "#4a5568" },
     { label: "Not persuadable", color: "#2d3748" },
-    { label: "Neg. movement", color: "#1a202c" },
+    { label: "Neg. movement", color: T,persNeg },
   ];
 
   return (
