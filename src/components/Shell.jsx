@@ -1,5 +1,6 @@
 import { NavLink, Outlet } from "react-router-dom";
-import { C, FONT } from "../data/theme";
+import { T } from "../theme";
+const FONT = "'DM Sans','Nunito',-apple-system,sans-serif";
 
 const NAV_ITEMS = [
   { to: "/",          label: "AUDIENCE MAP" },
@@ -10,7 +11,7 @@ const NAV_ITEMS = [
 
 export default function Shell() {
   return (
-    <div style={{ background: C.bg, minHeight: "100vh", fontFamily: FONT, color: C.text }}>
+    <div style={{ background: T.bg, minHeight: "100vh", fontFamily: FONT, color: T.text }}>
       <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&family=Nunito:wght@400;500;600;700;800&family=Roboto:wght@400;500;700;800&family=Roboto+Slab:wght@400;500;600;700;800&display=swap"
         rel="stylesheet"
@@ -20,15 +21,15 @@ export default function Shell() {
       <header style={{
         display: "flex", alignItems: "center", gap: 24,
         padding: "10px 28px",
-        borderBottom: `1px solid ${C.cardBorder}`,
-        background: C.card,
+        borderBottom: `1px solid ${T.Border}`,
+        background: T.card,
         position: "sticky", top: 0, zIndex: 100,
       }}>
         {/* Logo / Title */}
         <div style={{ display: "flex", alignItems: "center", gap: 10, flexShrink: 0 }}>
           <img src="/prismlogo.png" alt="PRISM logo" style={{ height: 28 }} />
           <span style={{
-            fontSize: 9, fontWeight: 600, color: C.steel,
+            fontSize: 9, fontWeight: 600, color: T.accent,
             letterSpacing: 2, textTransform: "uppercase",
           }}>AUDIENCE INTELLIGENCE PLATFORM</span>
         </div>
@@ -46,8 +47,8 @@ export default function Shell() {
                 fontSize: 11,
                 fontWeight: isActive ? 500 : 300,
                 fontFamily:"'Nunito',sans-serif",
-                color: isActive ? C.white : C.textMuted,
-                background: isActive ? `${C.steel}20` : "transparent",
+                color: isActive ? T.textBright : T.text2,
+                background: isActive ? `${T.accent}20` : "transparent",
                 textDecoration: "none",
                 transition: "all 0.15s",
                 whiteSpace: "nowrap",
@@ -60,10 +61,10 @@ export default function Shell() {
 
         {/* Study badge */}
         <div style={{
-          fontSize: 9, fontWeight: 600, color: C.textDim,
+          fontSize: 9, fontWeight: 600, color: T.textDim,
           letterSpacing: 1, textTransform: "uppercase",
           padding: "4px 10px", borderRadius: 4,
-          border: `1px solid ${C.cardBorder}`,
+          border: `1px solid ${T.border}`,
           flexShrink: 0,
         }}>
           MA ESI STUDY
