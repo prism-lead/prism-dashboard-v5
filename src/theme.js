@@ -163,7 +163,7 @@ const DARK = {
 const LIGHT = {
 
   // ── Core surfaces ──────────────────────────────
-  bg:           "#0e0a27b",
+  bg:           "#0d223e",
   bgAlt:        "#f1f3f6",
   card:         "#ffffff",
   cardAlt:      "#f9fafb",
