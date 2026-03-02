@@ -162,144 +162,145 @@ const DARK = {
 const LIGHT = {
 
   // ── Core surfaces ──────────────────────────────
-  bg:           "#f0f2f5",
-  bgAlt:        "#f1f3f6",
-  card:         "#f7f8fa",
-  cardAlt:      "#f0f2f5",
-  cardHover:    "#eef2f7",
-  border:       "#c5ced9",
-  borderStrong: "#c5ced9",
-  strip:        "#e2e8f0",
-  inputBg:      "#f1f5f9",
-  gridLine:     "#e2e8f0",
+  // Cool slate-tinted grays — modern but NOT stark white
+  bg:           "#edf0f4",      // soft blue-gray page bg
+  bgAlt:        "#e5e9ef",      // slightly deeper alternate bg
+  card:         "#f4f6f9",      // tinted off-white cards (NOT pure white)
+  cardAlt:      "#eef1f5",      // secondary card fill
+  cardHover:    "#dfe4ec",      // hover state with visible lift
+  border:       "#c8d0db",      // cool mid-tone border
+  borderStrong: "#b0bac8",      // heavier divider
+  strip:        "#d5dbe5",      // dot-strip tracks
+  inputBg:      "#e8ecf2",      // input / sub-panel bg
+  gridLine:     "#d5dbe5",      // SVG grid stroke
 
   // ── Text hierarchy ─────────────────────────────
-  text1:        "#1e293b",
-  text2:        "#64748b",
-  text3:        "#94a3b8",
-  textBright:   "#0f172a",
-  textMax:      "#020617",
-  textDim:      "#94a3b8",
-  textSubtle:   "#94a3b8",
-  textMono:     "#64748b",
-  textBody:     "#334155",
-  textInvert:   "#ffffff",
+  text1:        "#1a2536",      // primary text (dark navy)
+  text2:        "#556275",      // secondary / muted
+  text3:        "#8896a7",      // tertiary / dim labels
+  textBright:   "#0d1826",      // near-black emphasis
+  textMax:      "#040a14",      // maximum contrast headings
+  textDim:      "#8896a7",      // dim labels
+  textSubtle:   "#8896a7",      // footer / legend
+  textMono:     "#556275",      // monospace UI labels
+  textBody:     "#2d3d50",      // body copy
+  textInvert:   "#f4f6f9",      // text on dark accent fills
 
   // ── Accent / brand ─────────────────────────────
-  accent:       "#3b7cb8",
-  accentLight:  "#1d5590",
-  accentMuted:  "#93c5fd",
-  accentDim:    "#dbeafe",
+  accent:       "#3572a5",      // richer blue accent
+  accentLight:  "#245d8f",      // darker accent for labels
+  accentMuted:  "#88b8e0",      // muted accent borders
+  accentDim:    "#cdddf0",      // dim accent info boxes
 
   // ── Party ──────────────────────────────────────
-  gop:          "#dc2626",
-  gopFill:      "#dc2626",
-  gopStroke:    "#b91c1c",
-  gopText:      "#7f1d1d",
-  gopBadgeBg:   "#fee2e2",
-  gopBadgeText: "#991b1b",
-  gopHeaderBg:  "#fef2f2",
-  gopHeaderBdr: "#ef4444",
+  gop:          "#d42020",
+  gopFill:      "#d42020",
+  gopStroke:    "#b01818",
+  gopText:      "#741414",
+  gopBadgeBg:   "#f8d5d5",
+  gopBadgeText: "#8b1515",
+  gopHeaderBg:  "#f2e3e3",      // tinted, not pure white
+  gopHeaderBdr: "#e04040",
 
-  dem:          "#2563eb",
-  demFill:      "#2563eb",
-  demStroke:    "#1d4ed8",
-  demText:      "#1e3a8a",
-  demBadgeBg:   "#dbeafe",
-  demBadgeText: "#1e40af",
-  demHeaderBg:  "#eff6ff",
-  demHeaderBdr: "#3b82f6",
+  dem:          "#2058d4",
+  demFill:      "#2058d4",
+  demStroke:    "#1a48b8",
+  demText:      "#142e78",
+  demBadgeBg:   "#d0dff8",
+  demBadgeText: "#1a3898",
+  demHeaderBg:  "#e2eaf5",      // tinted, not pure white
+  demHeaderBdr: "#3878e8",
 
   // ── Tiers ──────────────────────────────────────
-  tier1:        "#059669",
-  tier1Bg:      "#d1fae5",
-  tier2:        "#a16207",
-  tier2Bg:      "#fef3c7",
-  tier3:        "#dc2626",
-  tier3Bg:      "#fee2e2",
+  tier1:        "#058060",
+  tier1Bg:      "#c4eeda",
+  tier2:        "#956000",
+  tier2Bg:      "#f5e8c0",
+  tier3:        "#c82020",
+  tier3Bg:      "#f5d4d4",
 
   // ── Semantic / data viz ────────────────────────
-  green:        "#059669",
-  greenBright:  "#10b981",
-  red:          "#dc2626",
-  redLight:     "#ef4444",
-  amber:        "#b45309",
-  amberBright:  "#d97706",
-  cyan:         "#0891b2",
-  teal:         "#0d9488",
-  tealDark:     "#14b8a6",
-  violet:       "#7c3aed",
-  violetDark:   "#6366f1",
-  rose:         "#e11d48",
-  blue:         "#2563eb",
-  blueLight:    "#3b82f6",
-  blueDim:      "#3b82f6",
+  green:        "#058060",
+  greenBright:  "#0ea572",
+  red:          "#c82020",
+  redLight:     "#e04040",
+  amber:        "#a34c00",
+  amberBright:  "#c87000",
+  cyan:         "#0880a0",
+  teal:         "#0c8878",
+  tealDark:     "#12a898",
+  violet:       "#6c30d8",
+  violetDark:   "#5858e0",
+  rose:         "#cc1840",
+  blue:         "#2058d4",
+  blueLight:    "#3878e8",
+  blueDim:      "#3878e8",
 
   // ── Profiler-specific ──────────────────────────
-  govtBlue:     "#2563eb",
-  corpAmber:    "#b45309",
+  govtBlue:     "#2058d4",
+  corpAmber:    "#a34c00",
 
   // ── Message map theme badges ───────────────────
-  themeFinancial:   "#059669",
-  themeCoverage:    "#2563eb",
-  themeInnovation:  "#7c3aed",
-  themeFreedom:     "#d97706",
-  themeSocial:      "#dc2626",
-  themeTrust:       "#0d9488",
-  themeOther:       "#64748b",
+  themeFinancial:   "#058060",
+  themeCoverage:    "#2058d4",
+  themeInnovation:  "#6c30d8",
+  themeFreedom:     "#c87000",
+  themeSocial:      "#c82020",
+  themeTrust:       "#0c8878",
+  themeOther:       "#556275",
 
   // ── Persuadability stack ───────────────────────
-  persHigh:     "#3b7cb8",
-  persLow:      "#93c5fd",
-  persNot:      "#94a3b8",
-  persNo:       "#cbd5e1",
-  persNeg:      "#e2e8f0",
+  persHigh:     "#3572a5",
+  persLow:      "#88b8e0",
+  persNot:      "#8896a7",
+  persNo:       "#b8c2ce",
+  persNeg:      "#d5dbe5",
 
   // ── MessageMap SoP heatmap (bg, text) ──────────
-  sopHot:       { bg: "#d1fae5", text: "#065f46" },
-  sopWarm:      { bg: "#dcfce7", text: "#166534" },
-  sopMid:       { bg: "#ecfdf5", text: "#1e7a54" },
-  sopNeutral:   { bg: "#f1f5f9", text: "#475569" },
-  sopCool:      { bg: "#f8f9fb", text: "#64748b" },
-  sopCold:      { bg: "#fef2f2", text: "#9f1239" },
-  sopChilly:    { bg: "#fee2e2", text: "#991b1b" },
-  sopIce:       { bg: "#fecdd3", text: "#881337" },
+  sopHot:       { bg: "#c0ead2", text: "#065040" },
+  sopWarm:      { bg: "#ccf0da", text: "#0e5428" },
+  sopMid:       { bg: "#ddf0e6", text: "#186848" },
+  sopNeutral:   { bg: "#e0e5ec", text: "#3d4e60" },
+  sopCool:      { bg: "#e8ecf2", text: "#556275" },
+  sopCold:      { bg: "#f0e0e0", text: "#901030" },
+  sopChilly:    { bg: "#f0d0d0", text: "#881818" },
+  sopIce:       { bg: "#ecc0c4", text: "#781028" },
 
   // ── Map / geography ────────────────────────────
-  mapActive:       "#3b7cb8",
-  mapActiveBorder: "#1d4ed8",
-  mapIdle:         "#e2e8f0",
-  mapIdleBorder:   "#cbd5e1",
-  mapHover:        "#bfdbfe",
+  mapActive:       "#3572a5",
+  mapActiveBorder: "#1a48b8",
+  mapIdle:         "#d5dbe5",
+  mapIdleBorder:   "#b8c2ce",
+  mapHover:        "#b0cce8",
 
   // ── Segment map specific ───────────────────────
-  segMapBg:        "#f1f3f6",
-  segMapGrid:      "#e2e8f0",
-  segMapDivider:   "#cbd5e1",
-  segMapBadgeBg:   "#f1f5f9",
+  segMapBg:        "#e5e9ef",
+  segMapGrid:      "#d5dbe5",
+  segMapDivider:   "#b8c2ce",
+  segMapBadgeBg:   "#e8ecf2",
 
   // ── Ideology heatmap ───────────────────────────
-  ideoBlue:     "rgba(37,99,235,",
-  ideoRed:      "rgba(220,38,38,",
-  ideoNeutral:  "rgba(100,116,139,",
+  ideoBlue:     "rgba(32,88,212,",
+  ideoRed:      "rgba(200,32,32,",
+  ideoNeutral:  "rgba(85,98,117,",
 
   // ── Rings / donut charts ───────────────────────
-  ring1:        "#3b7cb8",
-  ring2:        "#e2e8f0",
+  ring1:        "#3572a5",
+  ring2:        "#d5dbe5",
 
   // ── Sort / interactive state ───────────────────
-  sortActiveBg:  "#dbeafe",
-  sortIndicator: "#2563eb",
+  sortActiveBg:  "#cdddf0",
+  sortIndicator: "#2058d4",
 
   // ── PE (Policy Elites) column ──────────────────
-  peColor:      "#7c3aed",
-  peHeaderBg:   "#f5f3ff",
-  peBorder:     "#7c3aed",
+  peColor:      "#6c30d8",
+  peHeaderBg:   "#ece6f5",      // tinted lavender, not white
+  peBorder:     "#6c30d8",
 
   // ── Total column ───────────────────────────────
-  totalColor:   "#059669",
-  totalHeaderBg:"#f0fdf4",
-  totalBorder:  "#059669",
+  totalColor:   "#058060",
+  totalHeaderBg:"#e0f0e6",      // tinted green, not white
+  totalBorder:  "#058060",
 };
 
 
@@ -358,7 +359,7 @@ export function persColors(theme) {
 // ═════════════════════════════════════════════════
 
 // export const T = DARK;
-export const T = LIGHT;
+export const T = LIGHT;       // ← soft-mist light mode (active)
 
 // Both palettes are also available for a runtime toggle:
-// export { DARK, LIGHT };
+export { DARK, LIGHT };
