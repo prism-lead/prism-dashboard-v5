@@ -162,12 +162,12 @@ const DARK = {
 const LIGHT = {
 
   // ── Core surfaces ──────────────────────────────
-  bg:           "#f8f9fb",
+  bg:           "#f0f2f5",
   bgAlt:        "#f1f3f6",
-  card:         "#ffffff",
-  cardAlt:      "#f9fafb",
+  card:         "#f7f8fa",
+  cardAlt:      "#f0f2f5",
   cardHover:    "#eef2f7",
-  border:       "#d8dfe8",
+  border:       "#c5ced9",
   borderStrong: "#c5ced9",
   strip:        "#e2e8f0",
   inputBg:      "#f1f5f9",
@@ -187,7 +187,7 @@ const LIGHT = {
 
   // ── Accent / brand ─────────────────────────────
   accent:       "#3b7cb8",
-  accentLight:  "#2563a0",
+  accentLight:  "#1d5590",
   accentMuted:  "#93c5fd",
   accentDim:    "#dbeafe",
 
