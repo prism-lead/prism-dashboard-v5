@@ -156,154 +156,153 @@ const DARK = {
 };
 
 
+
 // ─────────────────────────────────────────────────
-// MID-TONE "TWILIGHT" PALETTE  (halfway between dark & light)
+// MID-TONE "TWILIGHT" PALETTE  (high-contrast variant)
 // ─────────────────────────────────────────────────
 const LIGHT = {
 
   // ── Core surfaces ──────────────────────────────
-  // Mid-tone slate — the sweet spot between dark and light
-  bg:           "#2a3040",      // medium slate page bg
-  bgAlt:        "#262c3a",      // slightly deeper alternate bg
-  card:         "#313848",      // raised card surface
-  cardAlt:      "#353d4e",      // secondary card fill
-  cardHover:    "#3d4558",      // hover state
-  border:       "#434d60",      // visible but not harsh border
-  borderStrong: "#505b70",      // heavier divider
-  strip:        "#3a4358",      // dot-strip tracks
-  inputBg:      "#282e3c",      // input / sub-panel bg
-  gridLine:     "#3a4358",      // SVG grid stroke
+  // Darker base + lighter cards = strong card lift
+  bg:           "#1e2432",      // deep slate page bg
+  bgAlt:        "#1a2030",      // deeper alternate bg
+  card:         "#2c3446",      // lifted card — clear separation from bg
+  cardAlt:      "#303a4c",      // secondary card fill
+  cardHover:    "#3a4560",      // pronounced hover
+  border:       "#4a5670",      // strong visible border
+  borderStrong: "#5a6880",      // heavy divider — clearly visible
+  strip:        "#384258",      // dot-strip tracks
+  inputBg:      "#222838",      // input / sub-panel bg
+  gridLine:     "#384258",      // SVG grid stroke
 
   // ── Text hierarchy ─────────────────────────────
-  text1:        "#d0d8e4",      // primary text — easy on eyes
-  text2:        "#8a96aa",      // secondary / muted
-  text3:        "#5c6880",      // tertiary / dim labels
-  textBright:   "#e0e6f0",      // emphasis
-  textMax:      "#edf1f7",      // maximum contrast headings
-  textDim:      "#5c6880",      // dim labels
-  textSubtle:   "#6a7890",      // footer / legend
-  textMono:     "#8090a8",      // monospace UI labels
-  textBody:     "#b8c4d4",      // body copy
-  textInvert:   "#1e2430",      // text on bright accent fills
+  text1:        "#dce4f0",      // bright primary text
+  text2:        "#94a4ba",      // clear secondary
+  text3:        "#606e84",      // tertiary still readable
+  textBright:   "#edf2fa",      // near-white emphasis
+  textMax:      "#f4f8ff",      // maximum contrast headings
+  textDim:      "#606e84",      // dim labels
+  textSubtle:   "#708098",      // footer / legend — bumped up
+  textMono:     "#90a0b8",      // monospace UI labels — brighter
+  textBody:     "#c4d0e0",      // body copy — high readability
+  textInvert:   "#141820",      // text on bright accent fills
 
   // ── Accent / brand ─────────────────────────────
-  accent:       "#6aa0d0",      // brighter blue accent for mid bg
-  accentLight:  "#88bce4",      // lighter accent for labels
-  accentMuted:  "#4a78a0",      // muted accent borders
-  accentDim:    "#354860",      // dim accent info boxes
+  accent:       "#70a8d8",      // bright blue accent
+  accentLight:  "#90c4f0",      // vivid accent for labels
+  accentMuted:  "#4878a8",      // muted accent borders
+  accentDim:    "#2c4060",      // dim accent info boxes
 
   // ── Party ──────────────────────────────────────
-  gop:          "#e06060",
-  gopFill:      "#d43030",
-  gopStroke:    "#e85050",
-  gopText:      "#f4baba",
-  gopBadgeBg:   "#5a2020",
-  gopBadgeText: "#f0a0a0",
-  gopHeaderBg:  "#382028",      // muted rose tint
-  gopHeaderBdr: "#e85050",
+  gop:          "#f06868",
+  gopFill:      "#e03838",
+  gopStroke:    "#f05858",
+  gopText:      "#fcc8c8",
+  gopBadgeBg:   "#5c1818",
+  gopBadgeText: "#f8a8a8",
+  gopHeaderBg:  "#321820",      // dark rose tint
+  gopHeaderBdr: "#f05858",
 
-  dem:          "#5888e0",
-  demFill:      "#3060d0",
-  demStroke:    "#5080e8",
-  demText:      "#b0cef4",
-  demBadgeBg:   "#1e3058",
-  demBadgeText: "#90b8f0",
-  demHeaderBg:  "#202838",      // muted blue tint
-  demHeaderBdr: "#5080e8",
+  dem:          "#60a0f0",
+  demFill:      "#3868e0",
+  demStroke:    "#5890f0",
+  demText:      "#c0d8f8",
+  demBadgeBg:   "#182850",
+  demBadgeText: "#98c0f8",
+  demHeaderBg:  "#182030",      // dark blue tint
+  demHeaderBdr: "#5890f0",
 
   // ── Tiers ──────────────────────────────────────
-  tier1:        "#40c890",
-  tier1Bg:      "#1a3830",
-  tier2:        "#d8a030",
-  tier2Bg:      "#3a3018",
-  tier3:        "#e04848",
-  tier3Bg:      "#3a1818",
+  tier1:        "#48d898",
+  tier1Bg:      "#143828",
+  tier2:        "#e8b038",
+  tier2Bg:      "#382c10",
+  tier3:        "#f05050",
+  tier3Bg:      "#381414",
 
   // ── Semantic / data viz ────────────────────────
-  green:        "#40c890",
-  greenBright:  "#58e0a0",
-  red:          "#e04848",
-  redLight:     "#f06060",
-  amber:        "#c88040",
-  amberBright:  "#e0a040",
-  cyan:         "#30c0e0",
-  teal:         "#30c0a8",
-  tealDark:     "#50d8c0",
-  violet:       "#9878e0",
-  violetDark:   "#7878e0",
-  rose:         "#e84068",
-  blue:         "#4080e0",
-  blueLight:    "#5898f0",
-  blueDim:      "#5898d0",
+  green:        "#48d898",
+  greenBright:  "#60f0a8",
+  red:          "#f05050",
+  redLight:     "#f87070",
+  amber:        "#d89048",
+  amberBright:  "#f0b048",
+  cyan:         "#38d0f0",
+  teal:         "#38d0b0",
+  tealDark:     "#58e8c8",
+  violet:       "#a888f0",
+  violetDark:   "#8888f0",
+  rose:         "#f04870",
+  blue:         "#4888f0",
+  blueLight:    "#60a0f8",
+  blueDim:      "#60a0e0",
 
   // ── Profiler-specific ──────────────────────────
-  govtBlue:     "#5898d0",
-  corpAmber:    "#c88040",
+  govtBlue:     "#60a0e0",
+  corpAmber:    "#d89048",
 
   // ── Message map theme badges ───────────────────
-  themeFinancial:   "#40c890",
-  themeCoverage:    "#5898f0",
-  themeInnovation:  "#9878e0",
-  themeFreedom:     "#e0a040",
-  themeSocial:      "#e04848",
-  themeTrust:       "#30c0a8",
-  themeOther:       "#8090a8",
+  themeFinancial:   "#48d898",
+  themeCoverage:    "#60a0f8",
+  themeInnovation:  "#a888f0",
+  themeFreedom:     "#f0b048",
+  themeSocial:      "#f05050",
+  themeTrust:       "#38d0b0",
+  themeOther:       "#90a0b8",
 
   // ── Persuadability stack ───────────────────────
-  persHigh:     "#6aa0d0",
-  persLow:      "#88bce4",
-  persNot:      "#5c6880",
-  persNo:       "#434d60",
-  persNeg:      "#343c4e",
+  persHigh:     "#70a8d8",
+  persLow:      "#90c4f0",
+  persNot:      "#606e84",
+  persNo:       "#404c60",
+  persNeg:      "#2c3446",
 
   // ── MessageMap SoP heatmap (bg, text) ──────────
-  sopHot:       { bg: "#1a4838", text: "#70e8b0" },
-  sopWarm:      { bg: "#1a3830", text: "#60d8a0" },
-  sopMid:       { bg: "#243838", text: "#88d8b8" },
-  sopNeutral:   { bg: "#353d4e", text: "#b8c4d4" },
-  sopCool:      { bg: "#303848", text: "#8a96aa" },
-  sopCold:      { bg: "#382830", text: "#d09098" },
-  sopChilly:    { bg: "#402028", text: "#f0a0a0" },
-  sopIce:       { bg: "#481820", text: "#f4a0a8" },
+  sopHot:       { bg: "#145038", text: "#78f0b8" },
+  sopWarm:      { bg: "#143828", text: "#68e0a8" },
+  sopMid:       { bg: "#1c3830", text: "#90e0c0" },
+  sopNeutral:   { bg: "#303a4c", text: "#c4d0e0" },
+  sopCool:      { bg: "#282e40", text: "#94a4ba" },
+  sopCold:      { bg: "#382028", text: "#e098a0" },
+  sopChilly:    { bg: "#441820", text: "#f8a8a8" },
+  sopIce:       { bg: "#501018", text: "#fca8b0" },
 
   // ── Map / geography ────────────────────────────
-  mapActive:       "#6aa0d0",
-  mapActiveBorder: "#4880c0",
-  mapIdle:         "#353d4e",
-  mapIdleBorder:   "#434d60",
-  mapHover:        "#4a78a0",
+  mapActive:       "#70a8d8",
+  mapActiveBorder: "#5088c8",
+  mapIdle:         "#2c3446",
+  mapIdleBorder:   "#4a5670",
+  mapHover:        "#4878a8",
 
   // ── Segment map specific ───────────────────────
-  segMapBg:        "#262c3a",
-  segMapGrid:      "#3a4358",
-  segMapDivider:   "#505b70",
-  segMapBadgeBg:   "#2a3040",
+  segMapBg:        "#1a2030",
+  segMapGrid:      "#384258",
+  segMapDivider:   "#5a6880",
+  segMapBadgeBg:   "#222838",
 
   // ── Ideology heatmap ───────────────────────────
-  ideoBlue:     "rgba(64,128,224,",
-  ideoRed:      "rgba(224,72,72,",
-  ideoNeutral:  "rgba(90,104,128,",
+  ideoBlue:     "rgba(72,136,240,",
+  ideoRed:      "rgba(240,80,80,",
+  ideoNeutral:  "rgba(96,110,132,",
 
   // ── Rings / donut charts ───────────────────────
-  ring1:        "#6aa0d0",
-  ring2:        "#3a4358",
+  ring1:        "#70a8d8",
+  ring2:        "#384258",
 
   // ── Sort / interactive state ───────────────────
-  sortActiveBg:  "#354860",
-  sortIndicator: "#5898f0",
+  sortActiveBg:  "#2c4060",
+  sortIndicator: "#60a0f8",
 
   // ── PE (Policy Elites) column ──────────────────
-  peColor:      "#9878e0",
-  peHeaderBg:   "#282038",      // muted purple tint
-  peBorder:     "#9878e0",
+  peColor:      "#a888f0",
+  peHeaderBg:   "#241838",      // dark purple tint
+  peBorder:     "#a888f0",
 
   // ── Total column ───────────────────────────────
-  totalColor:   "#40c890",
-  totalHeaderBg:"#1a3028",      // muted green tint
-  totalBorder:  "#40c890",
+  totalColor:   "#48d898",
+  totalHeaderBg:"#142820",      // dark green tint
+  totalBorder:  "#48d898",
 };
-
-
 // ─────────────────────────────────────────────────
 // HELPER: SoP color lookup (replaces getSopC)
 // ─────────────────────────────────────────────────
