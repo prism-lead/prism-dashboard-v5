@@ -62,7 +62,7 @@ export default function MessageMap(){
         <span style={{fontFamily:"'JetBrains Mono',monospace",fontSize:7,color:"#475569",letterSpacing:1}}>SoP:</span>
         {[{l:"≤6",bg:"#2d1215"},{l:"7-8",bg:"#1a1520"},{l:"9-10",bg:"#1e293b"},{l:"11-12",bg:"#064e3b"},{l:"≥13",bg:"#065f46"}].map((h,i)=>(<div key={i} style={{display:"flex",alignItems:"center",gap:2}}><div style={{width:10,height:10,borderRadius:2,background:h.bg,border:"1px solid #1e293b"}}/><span style={{fontSize:7,color:"#94a3b8"}}>{h.l}</span></div>))}
         <span style={{marginLeft:10,fontFamily:"'JetBrains Mono',monospace",fontSize:7,color:"#475569",letterSpacing:1}}>THEME:</span>
-        {Object.entries(THEME_COLORS).filter(([t])=>t!=="Other").map(([t,c])=>(<div key={t} style={{display:"flex",alignItems:"center",gap:2}}><div style={{width:6,height:6,borderRadius:"50%",background:c}}/><span style={{fontSize:7,color:"#94a3b8"}}>{t}</span></div>))}
+        {["Financial","Coverage","Innovation","Freedom","Social","Trust"].map(t=>(<div key={t} style={{display:"flex",alignItems:"center",gap:2}}><div style={{width:6,height:6,borderRadius:"50%",background:themeColor(t, T)}}/><span style={{fontSize:7,color:"#94a3b8"}}>{t}</span></div>))}
       </div>
 
       {/* Heatmap table */}
@@ -121,7 +121,7 @@ export default function MessageMap(){
               {SEGMENTS.map((seg,si)=>{
                 const colIdx = si+segStartIdx;
                 const isSorted = sortCol===colIdx;
-                const pc = PARTY_COLOR[seg.party] || "#cbd5e1";
+                const pc = partyColor(seg.party, T);
                 return(
                   <th
                     key={seg.id}
