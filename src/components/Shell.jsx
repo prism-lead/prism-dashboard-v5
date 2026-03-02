@@ -1,0 +1,79 @@
+import { NavLink, Outlet } from "react-router-dom";
+import { C, FONT } from "../data/theme";
+
+const NAV_ITEMS = [
+  { to: "/",          label: "AUDIENCE MAP" },
+  { to: "/roi",       label: "AUDIENCE ROI" },
+  { to: "/messages",  label: "MESSAGE MAP" },
+  { to: "/profile",   label: "AUDIENCE PROFILES" },
+];
+
+export default function Shell() {
+  return (
+    <div style={{ background: C.bg, minHeight: "100vh", fontFamily: FONT, color: C.text }}>
+      <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&family=Nunito:wght@400;500;600;700;800&family=Roboto:wght@400;500;700;800&family=Roboto+Slab:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+      />
+
+      {/* ─── TOP BAR ─── */}
+      <header style={{
+        display: "flex", alignItems: "center", gap: 24,
+        padding: "10px 28px",
+        borderBottom: `1px solid ${C.cardBorder}`,
+        background: C.card,
+        position: "sticky", top: 0, zIndex: 100,
+      }}>
+        {/* Logo / Title */}
+        <div style={{ display: "flex", alignItems: "center", gap: 10, flexShrink: 0 }}>
+          <img src="/prismlogo.png" alt="PRISM logo" style={{ height: 28 }} />
+          <span style={{
+            fontSize: 9, fontWeight: 600, color: C.steel,
+            letterSpacing: 2, textTransform: "uppercase",
+          }}>AUDIENCE INTELLIGENCE PLATFORM</span>
+        </div>
+
+        {/* Nav Links */}
+        <nav style={{ display: "flex", gap: 2, flex: 1 }}>
+          {NAV_ITEMS.map(item => (
+            <NavLink
+              key={item.to}
+              to={item.to}
+              end={item.to === "/"}
+              style={({ isActive }) => ({
+                padding: "6px 14px",
+                borderRadius: 6,
+                fontSize: 11,
+                fontWeight: isActive ? 500 : 300,
+                fontFamily:"'Nunito',sans-serif",
+                color: isActive ? C.white : C.textMuted,
+                background: isActive ? `${C.steel}20` : "transparent",
+                textDecoration: "none",
+                transition: "all 0.15s",
+                whiteSpace: "nowrap",
+              })}
+            >
+              {item.label}
+            </NavLink>
+          ))}
+        </nav>
+
+        {/* Study badge */}
+        <div style={{
+          fontSize: 9, fontWeight: 600, color: C.textDim,
+          letterSpacing: 1, textTransform: "uppercase",
+          padding: "4px 10px", borderRadius: 4,
+          border: `1px solid ${C.cardBorder}`,
+          flexShrink: 0,
+        }}>
+          MA ESI STUDY
+        </div>
+      </header>
+
+      {/* ─── CONTENT AREA ─── */}
+      <main style={{ padding: "24px 28px" }}>
+        <Outlet />
+      </main>
+    </div>
+  );
+}
