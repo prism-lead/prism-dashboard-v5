@@ -72,7 +72,7 @@ function DeltaBar({ pre, post }) {
   const delta = +(post - pre).toFixed(1);
   const isPos = delta > 0;
   const isNeg = delta < 0;
-  const deltaColor = isPos ? "#34d399" : isNeg ? "#ef4444" : T.text3;
+  const deltaColor = isPos ? T.green : isNeg ? T.red : T.text3;
 
   return (
     <div style={{
@@ -117,7 +117,7 @@ function MetricLabel({ metric }) {
         <div style={{
           position: "absolute", left: 0, top: "100%", zIndex: 50,
           width: 220, padding: "8px 10px",
-          background: "#1a2030", border: `1px solid ${T.accent}`,
+          background: T.cardHover, border: `1px solid ${T.accent}`,
           borderRadius: 6, boxShadow: "0 4px 16px rgba(0,0,0,0.5)"
         }}>
           <div style={{
@@ -278,11 +278,11 @@ export default function AudienceROI() {
   const prePostH = H.prePostPad + PRE_POST_METRICS.length * H.prePostRow;
 
   const persuadLabels = [
-    { label: "High leverage", color: T.persNot },
-    { label: "Low leverage", color: T.persNo },
-    { label: "Not convertible", color: "#4a5568" },
-    { label: "Not persuadable", color: "#2d3748" },
-    { label: "Neg. movement", color: T,persNeg },
+    { label: "High leverage", color: T.accent },
+    { label: "Low leverage", color: T.accentLight },
+    { label: "Not convertible", color: T.persNot },
+    { label: "Not persuadable", color: T.persNo },
+    { label: "Neg. movement", color: T.persNeg },
   ];
 
   return (
